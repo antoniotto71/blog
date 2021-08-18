@@ -10,33 +10,34 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="form-group">
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :location %>
-    <%= form.text_field :location %>
+    <%= form.text_field :location, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :excerpt %>
-    <%= form.text_field :excerpt %>
+    <%= form.text_field :excerpt, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :published_at %>
-    <%= form.datetime_select :published_at %>
+    <%= form.datetime_select :published_at, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Submit', class: 'btn btn-success' %>
+  </div>
   </div>
 <% end %>
