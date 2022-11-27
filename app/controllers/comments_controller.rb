@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = @articles.comment.find(params[:id])
+    @comment = @article.comments.find(params[:id])
     @comment.destroy
     redirect_to @article, notice: "Comment deleted"
   end
@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
   private
 
   def load_article
-    @article = Article.find.params([:id])
+    @article = Article.find(params[:article_id])
   end
 
   def comment_params
